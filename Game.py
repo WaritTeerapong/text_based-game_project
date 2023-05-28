@@ -105,6 +105,7 @@ def start_game():
     
     while not(steve.has_diamond_pickaxe()) :
         village_scene()
+        print("go dungeon")
         dungeon_scene()
     
     

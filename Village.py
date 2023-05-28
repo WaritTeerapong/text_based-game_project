@@ -51,17 +51,17 @@ def menu():
     print("5) Exploring Dungeon")
     print("==================================")
     
-    choice = 0 
-    while choice not in [1,2,3,4,5]:
-        choice = int(input(">> "))
+    choice = "0" 
+    while choice not in ["1","2","3","4","5"]:
+        choice = input(">> ")
         
-        if choice == 1 :
+        if choice == "1" :
             eating()
-        elif choice == 2:
+        elif choice == "2":
             farming()
         elif choice == 3:
             steve.display_invt()
-        elif choice == 4:
+        elif choice == "4":
             steve.display_status()
         elif choice == 5:
             go_dungeon = True

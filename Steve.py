@@ -1,4 +1,5 @@
 from json import *
+import os
 
 # pull item capacity data as item_cap
 with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_project\\Item_Capacity.json", "r") as read_file:
@@ -69,12 +70,18 @@ class player:
             
     #display health and inventory capacity
     def display_status(self):
+        os.system("cls")
+        print("=========================")
+        print()
         print("HP:",self.hp,"/ 20")
         print("Bag:",self.invt_cap,"/ 16")
+        print()
+        print("=========================")
+        input("press any key to continue...")
         
     #display inventory
     def display_invt(self):
-  
+        os.system("cls")
         print("=========================")
         print("        Inventory        ")
         print("                         ")
@@ -82,6 +89,7 @@ class player:
             print("> ",i)
         print("                         ")
         print("=========================")
+        input("press any key to continue...")
     
     def has_diamond_pickaxe(self):
         return True if "diamond pickaxe" in self.invt else False
