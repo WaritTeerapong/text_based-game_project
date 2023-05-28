@@ -38,8 +38,29 @@ def farming():
 #     pass
 
 def eating():
-    pass
-''' - input กินอะไร
+    os.sys("cls")
+    
+    if(steve.hp == 20):
+        print("Your health is already full")
+        input("press any key to continue...")
+        return
+    
+    print("HP : ",steve.hp,"/ 20")
+    print("What do you want to eat")
+    food = input(">> ")
+    if food not in steve.invt:
+        print("You don't have this food...")
+        input("press any key to continue...")
+        return
+    
+    steve.healed(food)
+    print("HP : ",steve.hp,"/ 20")
+    input("press any key to continue...")
+    
+    
+'''
+    - display hp
+    - input กินอะไร
     - check ว่ามีใน inventory มั้ย
     - heal
     - display hp'''
