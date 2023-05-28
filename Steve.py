@@ -1,6 +1,14 @@
 from json import *
 import os
 
+''' this file manage 
+    - player hp
+    - inventory
+    - inventory capacity
+    - display status
+    - display inventory
+    - check diamond pickaxe (to end game)'''
+
 # pull item capacity data as item_cap
 with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_project\\Item_Capacity.json", "r") as read_file:
     item_cap = load(read_file)

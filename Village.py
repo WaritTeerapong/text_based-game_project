@@ -39,6 +39,10 @@ def farming():
 
 def eating():
     pass
+''' - input กินอะไร
+    - check ว่ามีใน inventory มั้ย
+    - heal
+    - display hp'''
 
 def menu():
     os.system("cls")

@@ -100,13 +100,14 @@ def Cut_some_wood_scene():
 def start_game():
     menu_screen()
     menu_selection()
-    Prologue()
+    # Prologue()
     # Prologue_selection()
     
     while not(steve.has_diamond_pickaxe()) :
-        village_scene()
+        village_scene() # import from Village.py
         print("go dungeon")
-        dungeon_scene()
+        
+        dungeon_scene() # import from Dungeon_level.py
     
     
 start_game()
