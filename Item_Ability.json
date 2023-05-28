@@ -1,0 +1,28 @@
+{
+    "attack_item" : {
+        "wooden axe" : 4,
+        "wooden pickaxe" : 3,
+        "wooden sword" : 5,
+        
+        "stone axe" : 5,
+        "stone pickaxe" : 4,
+        "stone sword" : 7, 
+
+        "iron sword" : 10
+    },
+    "heal_item" : {
+        "apple" : 3,
+        "carrot" : 2,
+        "potato" : 2,
+        "bread" : 5
+    },
+    "resource" : {
+        "wood" : [""],
+        "stone" : [""],
+        "iron" : [""],
+        "diamond" : [""]
+    }
+    
+    
+
+}

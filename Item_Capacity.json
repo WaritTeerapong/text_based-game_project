@@ -1,0 +1,15 @@
+{
+    "apple" : 1,
+    "carrot" : 1,
+    "potato" :1,
+    "bread": 2,
+    
+    "wooden axe" : 3,
+    "wooden pickaxe" : 3,
+    "wooden sword" : 2,
+    "stone sword" : 3,
+    "stone axe" : 4,
+    "stone pickaxe" : 4,
+    "iron sword" : 3,
+    "iron pickaxe" : 4
+}
