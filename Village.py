@@ -37,12 +37,32 @@ def eating():
     pass
 
 def menu():
-    print("In the village you can take a rest or")
-    print("Crafting")
-    print("Eating")
-    print("Farming")
-    print("go to Dungeon")
-    choice = input(">> ")
+    print("==================================")
+    print("Take a rest before exploring again")
+    print("1) Eating")
+    print("2) Farming")
+    print("3) Check inventory")
+    print("4) Check Status")
+    print("5) Exploring Dungeon")
+    print("==================================")
+    
+    choice = 0 
+    while choice not in [1,2,3,4,5]:
+        choice = int(input(">> "))
+        
+        if choice == 1 :
+            eating()
+        elif choice == 2:
+            farming()
+        elif choice == 3:
+            steve.display_invt()
+        elif choice == 4:
+            steve.display_status()
+        elif choice == 5:
+            go_dungeon = True
+        
+        
+    
 
 
    
@@ -50,5 +70,8 @@ def menu():
 def village_scene():
     print("Welcome to Village")
     while go_dungeon == False:
-        
+
         menu()
+    
+    print("Goodluck..")
+    return

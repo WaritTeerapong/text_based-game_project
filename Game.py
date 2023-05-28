@@ -39,6 +39,7 @@ def menu_selection():
         # elif other menu
 
 def introduction():
+    # Introduction narated part
     os.system('cls')
     input("Awesome!! Let's get in the world!!")
     os.system('cls')
@@ -103,7 +104,7 @@ def Cut_some_wood_scene():
     steve.display_status()
     
    
-    
+    # game sequence
 def start_game():
     menu_screen()
     menu_selection()

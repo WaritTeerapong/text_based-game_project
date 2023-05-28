@@ -74,15 +74,13 @@ class player:
         
     #display inventory
     def display_invt(self):
-        print("    _________________    ")
-        print("   /    |       |    \\    ")
-        print("  |     ---------     |  ")
+  
         print("=========================")
-        print("||      Inventory      ||")
-        print("||                     ||")
+        print("        Inventory        ")
+        print("                         ")
         for i in self.invt:
-            print("||",i," "*(len(i)-21),"||")
-        print("||                     ||")
+            print("> ",i)
+        print("                         ")
         print("=========================")
     
     def has_diamond_pickaxe(self):

@@ -17,8 +17,8 @@
         "bread" : 5
     },
     "resource" : {
-        "wood" : [""],
-        "stone" : [""],
+        "wood" : ["wooden pickaxe","wooden sword"],
+        "stone" : ["stone pickaxe","stone sword"],
         "iron" : [""],
         "diamond" : [""]
     }
