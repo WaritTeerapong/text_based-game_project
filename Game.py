@@ -9,8 +9,6 @@ from Dungeon_Level import*
 from Village import*
 from Steve import*
 
-
-
 def menu_screen():
     os.system('cls')
     print("===================================")   
@@ -59,15 +57,12 @@ def introduction():
     os.system('cls')
     input("Then let us Begin~~ ")
     
-    
-
 def Prologue():
     os.system('cls')
     # print("First you need to find some resource.")
     # print("You can either find by your self or just wonder around")
     # print("1) Go cut some wood")
-    # print("2) Wonder around for a bit")
-    
+    # print("2) Wonder around for a bit") 
 
 def Prologue_selection():
     choice = int(input("(Input number) >> "))
@@ -83,7 +78,6 @@ def Prologue_selection():
             Cut_some_wood_scene()
         elif choice == 2 :
             return
-     
 
 def Cut_some_wood_scene():
     print("Steve is cutting some wood",end = "")
@@ -100,11 +94,9 @@ def Cut_some_wood_scene():
     steve.invt.append("apple")
     steve.invt_cap += 3
     
-    
-    steve.display_status()
-    
+    steve.display_status() 
    
-    # game sequence
+# game sequence
 def start_game():
     menu_screen()
     menu_selection()

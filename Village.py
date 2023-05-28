@@ -1,12 +1,15 @@
 from Steve import *
 from random import randint
+import os
 
 go_dungeon = False
 already_farming = False
 
 def farming():
+    os.system("cls")
     if already_farming:
         print("You already helping the villager.")
+        input("press any key to continue...")
         return
     
     #chance drop
@@ -27,6 +30,7 @@ def farming():
             quantity = i+1
             break
     print("You have obtained",food,"for",quantity,"pieces")
+    input("press any key to continue...")
     
     
 
@@ -37,6 +41,7 @@ def eating():
     pass
 
 def menu():
+    os.system("cls")
     print("==================================")
     print("Take a rest before exploring again")
     print("1) Eating")
@@ -61,9 +66,6 @@ def menu():
         elif choice == 5:
             go_dungeon = True
         
-        
-    
-
 
    
 # main sequence

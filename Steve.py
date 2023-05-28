@@ -1,10 +1,10 @@
 from json import *
 
 # pull item capacity data as item_cap
-with open("C:\\Users\\smart\\ProgrammingProjects\\Normal game project\\Mancraft\\Item_Capacity.json", "r") as read_file:
+with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_project\\Item_Capacity.json", "r") as read_file:
     item_cap = load(read_file)
     
-with open("C:\\Users\\smart\\ProgrammingProjects\\Normal game project\\Mancraft\\Item_Ability.json", "r") as read_file:
+with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_project\\Item_Ability.json", "r") as read_file:
     item_ablt = load(read_file)
     
 #### player setup ####
@@ -84,6 +84,6 @@ class player:
         print("=========================")
     
     def has_diamond_pickaxe(self):
-        return "diamond pickaxe" in self.inv
+        return True if "diamond pickaxe" in self.invt else False
     
 steve = player()
