@@ -37,7 +37,7 @@ def dungeon_scene():
             while choice not in ["1","2"]:
                 choice = input(">> ")
                 if choice == "1" :
-                    level += 1 
+                    
                     break
                 elif choice == "2":
                     input("you are exiting dungeon...")
@@ -46,7 +46,7 @@ def dungeon_scene():
         #exit dungeon
         if exit_dungeon: 
             continue
-                    
+        level += 1            
         next_level(level)
               
         
