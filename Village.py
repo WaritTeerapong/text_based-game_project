@@ -38,7 +38,7 @@ def farming():
 #     pass
 
 def eating():
-    os.sys("cls")
+    os.system("cls")
     
     if(steve.hp == 20):
         print("Your health is already full")
@@ -58,13 +58,6 @@ def eating():
     input("press any key to continue...")
     
     
-'''
-    - display hp
-    - input กินอะไร
-    - check ว่ามีใน inventory มั้ย
-    - heal
-    - display hp'''
-
 def menu():
     os.system("cls")
     print("==================================")
@@ -84,7 +77,7 @@ def menu():
             eating()
         elif choice == "2":
             farming()
-        elif choice == 3:
+        elif choice == "3":
             steve.display_invt()
         elif choice == "4":
             steve.display_status()
