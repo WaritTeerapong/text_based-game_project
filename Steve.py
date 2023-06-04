@@ -26,7 +26,7 @@ class player:
         
         self.max_invt = 20
     
-    #checking inventory
+    
     def search_pickaxe(self):
         if "diamond pickaxe" in self.invt:
             return "diamond pickaxe"
@@ -35,8 +35,16 @@ class player:
         elif "stone pickaxe" in self.invt:
             return "stone pickaxe"
         else:
-            return "woooden pickaxe"
+            return "wooden pickaxe"
     
+    def search_sword(self):
+        if "iron sword" in self.invt:
+            return "diamond sword"
+        elif "stone sword" in self.invt:
+            return "stone sword"
+        else:
+            return "wooden sword"
+        
     #add item to vacant inventory
     def add_item(self,new_item):
         while (self.invt_cap + item_cap[new_item] > self.max_invt):

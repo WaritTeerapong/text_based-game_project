@@ -1,9 +1,9 @@
 {
     "attack_item" : {
 
-        "wooden sword" : 5,
-        "stone sword" : 7, 
-        "iron sword" : 10
+        "wooden sword" : 1,
+        "stone sword" : 2, 
+        "iron sword" : 3
 
     },
 
@@ -18,6 +18,13 @@
         "carrot" : 2,
         "potato" : 2,
         "bread" : 5
+    },
+
+    "upgrade_item" :{
+        "stone" : [""],
+        "iron" : [""],
+        "diamond" : [""]
+
     }
 
 }
