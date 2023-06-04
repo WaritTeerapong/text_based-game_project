@@ -132,7 +132,6 @@ def start_game():
     ending()
     
 
-
 start_game()
     
     

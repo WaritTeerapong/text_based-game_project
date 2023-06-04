@@ -3,15 +3,17 @@ from random import randint
 import os
 
 
-already_farming = False
+
 
 def farming():
     os.system("cls")
-    if already_farming:
+    if steve.already_farming:
         print("You already helping the villager.")
         input("press any key to continue...")
         return
     
+    
+    steve.already_farming = True
     #chance drop
     random = randint(1,100)
     quantity = randint(2,5)
@@ -58,7 +60,7 @@ def eating():
     input("press any key to continue...")
     
     
-def menu():
+def menu(go_dungeon):
     os.system("cls")
     print("==================================")
     print("Take a rest before exploring again")
@@ -85,7 +87,8 @@ def menu():
         elif choice == "5":
             steve.display_status()
         elif choice == "6":
-            return True
+            go_dungeon = True
+    return go_dungeon
         
 
    
@@ -93,12 +96,13 @@ def menu():
 
 
 def village_scene():
+    steve.already_farming = False
     go_dungeon = False
     input("Welcome to Village")
     while go_dungeon == False:
         
-        go_dungeon = menu()
+        go_dungeon = menu(go_dungeon)
         
-    
+    os.system("cls")
     input("Goodluck..")
     return

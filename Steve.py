@@ -22,6 +22,7 @@ class player:
         self.hp = 20
         self.invt_cap = 0
         self.invt = []
+        self.already_farm = False
         
         self.max_invt = 20
     
@@ -56,21 +57,27 @@ class player:
         
     #dump item from inventory
     def throw_item(self):
+        
         if self.invt == []:
-            print("Nothing is left in the inventory...")
+            os.system("cls")
+            input("Nothing is left in the inventory...")
             return
         
+        os.system("cls")
         print("Input the item you want to throw...")
         sad_item = input(">> ")
         
         while (sad_item not in self.invt):
+            os.system("cls")
             print("No such item in your inventory...")
             sad_item = input(">> ")
         else:
             self.invt.remove(sad_item)
             self.invt_cap -= item_cap[sad_item] 
+            os.system("cls")
             print("You have thrown the", sad_item, "far far away..")
-            print("Your inventory capacity :", self.invt_cap)
+            input("Your inventory capacity :", self.invt_cap)
+  
     
     # health management
     

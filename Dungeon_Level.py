@@ -9,8 +9,6 @@ with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_projec
     item_ablt = load(read_file)
     
 
-
-
 def fight_mobs():
     pass
 
@@ -86,23 +84,29 @@ def dungeon_scene():
     
     while exit_dungeon == False:
         if level>0:
+            os.system("cls")
             print("Would you like to go deeper or back to village")
             print("1) continue exploring")
             print("2) back to village")
             choice = input(">> ")
-            
+            if choice == "1" :
+                pass
+            elif choice == "2":
+                input("you are exiting dungeon...")
+                exit_dungeon = True
             
             while choice not in ["1","2"]:
                 choice = input(">> ")
                 if choice == "1" :
                     break
                 elif choice == "2":
+                    os.system("cls")
                     input("you are exiting dungeon...")
                     exit_dungeon = True
                     
         #exit dungeon
         if exit_dungeon: 
-            continue
+            break
         level += 1            
         next_level(level)
               
