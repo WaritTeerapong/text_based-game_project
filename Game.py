@@ -125,8 +125,8 @@ def start_game():
     
     while not(steve.has_diamond_pickaxe()) :
         village_scene() # import from Village.py
-        print("go dungeon")
-        
+        input("going to dungeon...")
+
         dungeon_scene() # import from Dungeon_level.py
     
     ending()

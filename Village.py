@@ -2,7 +2,7 @@ from Steve import *
 from random import randint
 import os
 
-go_dungeon = False
+
 already_farming = False
 
 def farming():
@@ -71,28 +71,34 @@ def menu():
     print("==================================")
     
     choice = "0" 
-    while choice not in ["1","2","3","4","5"]:
+    while choice not in ["1","2","3","4","5","6"]:
         choice = input(">> ")
         
         if choice == "1" :
             eating()
         elif choice == "2":
-            farming()
+            upgrade()
         elif choice == "3":
-            steve.display_invt()
+            farming()
         elif choice == "4":
+            steve.display_invt()
+        elif choice == "5":
             steve.display_status()
-        elif choice == 5:
-            go_dungeon = True
+        elif choice == "6":
+            return True
         
 
    
 # main sequence
-def village_scene():
-    print("Welcome to Village")
-    while go_dungeon == False:
 
-        menu()
+
+def village_scene():
+    go_dungeon = False
+    input("Welcome to Village")
+    while go_dungeon == False:
+        
+        go_dungeon = menu()
+        
     
-    print("Goodluck..")
+    input("Goodluck..")
     return

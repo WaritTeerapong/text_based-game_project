@@ -8,8 +8,8 @@ with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_projec
 with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_project\\Item_Ability.json", "r") as read_file:
     item_ablt = load(read_file)
     
-exit_dungeon = False
-level = 0
+
+
 
 def fight_mobs():
     pass
@@ -80,7 +80,8 @@ def next_level(current_level):
 
 # main sequence
 def dungeon_scene():
-    
+    exit_dungeon = False
+    level = 0
     choice = "0" 
     
     while exit_dungeon == False:
