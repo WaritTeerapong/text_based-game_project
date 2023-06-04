@@ -17,7 +17,7 @@ def flee(exit_dungeon):
     steve.hp -= 10
     os.system("cls")
     input("You are going back to the village")
-    exit_dungeon =True
+    exit_dungeon = True
     return exit_dungeon
     
 def fight(lv,exit_dungeon,mob):
@@ -38,7 +38,7 @@ def fight(lv,exit_dungeon,mob):
         print("============================")
         print()
         print("Congratulations!!!")
-        print("You obtain ",mob.item_drop,"from the monster!!!")
+        print("You obtain",mob.item_drop,"from the monster!!!")
         print()
         print("============================")
         input("Press any key to continue...")
@@ -81,6 +81,7 @@ def action(lv,mob,exit_dungeon):
         elif choice == "4":
             exit_dungeon = flee(exit_dungeon)
         
+    return exit_dungeon
 
 def fight_mobs(lv,exit_dungeon):
     input("Fight mobs")
@@ -96,10 +97,12 @@ def fight_mobs(lv,exit_dungeon):
     print("You encounter",mob.name,"!!!")
     print()
     print("============================")
+    input("")
     
-    while mob.hp != 0 or (exit_dungeon == True):
+    while mob.hp != 0 and (exit_dungeon == False):
         exit_dungeon = action(lv,mob,exit_dungeon)
     
+    return exit_dungeon
 
 def found_ore(lv):
     ore = lvl_info[str(lv)]["ore"]
@@ -139,7 +142,9 @@ def lv_1(exit_dungeon):
     if randint(1,100) <= 50:
         found_ore(1)
     else:
-        fight_mobs(1,exit_dungeon)
+        exit_dungeon = fight_mobs(1,exit_dungeon)
+    
+    return exit_dungeon
         
 
 def lv_2(exit_dungeon):
@@ -149,27 +154,33 @@ def lv_2(exit_dungeon):
     if randint(1,100) <= 30:
         found_ore(2)
     else:
-        fight_mobs(2,exit_dungeon)
+        exit_dungeon = fight_mobs(2,exit_dungeon)
+    
+    return exit_dungeon
 
 def lv_3(exit_dungeon):
     # ore_chance = 10
     # mob_chance = 90
     
     if randint(1,100) <= 10:
-        found_ore(3)
+        exit_dungeon = found_ore(3)
     else:
         fight_mobs(3,exit_dungeon)
+        
+    return exit_dungeon
 
 
 
 def next_level(current_level,exit_dungeon):
     
     if current_level == 1:
-        lv_1(exit_dungeon)
+        exit_dungeon = lv_1(exit_dungeon)
     elif current_level == 2:
-        lv_2(exit_dungeon)
+        exit_dungeon = lv_2(exit_dungeon)
     elif current_level == 3:
-        lv_3(exit_dungeon)
+        exit_dungeon = lv_3(exit_dungeon)
+    
+    return exit_dungeon
 
 # main sequence
 def dungeon_scene():
@@ -204,7 +215,7 @@ def dungeon_scene():
             break
         #if not
         level += 1            
-        exit_dungeaon = next_level(level,exit_dungeon)
+        exit_dungeon = next_level(level,exit_dungeon)
               
         
         
