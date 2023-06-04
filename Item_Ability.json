@@ -1,14 +1,16 @@
 {
     "attack_item" : {
-        "wooden axe" : 4,
-        "wooden pickaxe" : 3,
-        "wooden sword" : 5,
-        
-        "stone axe" : 5,
-        "stone pickaxe" : 4,
-        "stone sword" : 7, 
 
+        "wooden sword" : 5,
+        "stone sword" : 7, 
         "iron sword" : 10
+
+    },
+
+    "mining_item" : {
+        "wooden pickaxe" : ["stone"],
+        "stone pickaxe" : ["iron","stone"],
+        "iron pickaxe" :  ["diamond","iron","stone"]
     },
 
     "heal_item" : {

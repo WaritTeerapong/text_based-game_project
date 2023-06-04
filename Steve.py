@@ -26,8 +26,15 @@ class player:
         self.max_invt = 20
     
     #checking inventory
-    def check_invt(self):
-        return self.invt.sort()   
+    def search_pickaxe(self):
+        if "diamond pickaxe" in self.invt:
+            return "diamond pickaxe"
+        elif "iron pickaxe" in self.invt:
+            return "iron pickaxe"
+        elif "stone pickaxe" in self.invt:
+            return "stone pickaxe"
+        else:
+            return "woooden pickaxe"
     
     #add item to vacant inventory
     def add_item(self,new_item):

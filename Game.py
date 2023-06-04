@@ -21,6 +21,8 @@ def menu_screen():
 def menu_selection():
     option = input(">> ")
     if option.lower() == "play":
+        steve.add_item("wooden pickaxe")
+        steve.add_item("wooden sword")
         introduction()
     elif option.lower() == "exit":
         sys.exit()
@@ -30,6 +32,9 @@ def menu_selection():
         print("I quite not understand. Try again")
         option = input(">> ")
         if option.lower() == "play":
+            steve.add_item("wooden pickaxe")
+            steve.add_item("wooden sword")
+            
             introduction()
         elif option.lower() == "exit":
             print("Unfortunately, hope we meet again...")
@@ -96,6 +101,21 @@ def Cut_some_wood_scene():
     
     steve.display_status() 
    
+def ending():
+    os.system("cls")
+    input("Steve had gone deep down until he found the Obsidians...")
+    input("He collected it with his diamond pickaxe...")
+    input("Then he came above the under ground and assemble the gate with the Obsidians...")
+    input("The gate reacted strangly... seems to lead the another dimension...")
+    input("Steve did feel sogood about it... as well as the villagers")
+    input("But he had to get in anyway...")
+    input("He slowly disappeared and felt like fading away graduately...")
+    input("...")
+    input("Thanks for playing...")
+    input("To be continue...")
+    sys.exit()
+    
+    
 # game sequence
 def start_game():
     menu_screen()
@@ -109,7 +129,10 @@ def start_game():
         
         dungeon_scene() # import from Dungeon_level.py
     
+    ending()
     
+
+
 start_game()
     
     

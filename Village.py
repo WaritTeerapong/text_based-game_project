@@ -34,8 +34,8 @@ def farming():
     
     
 
-# def crafting():
-#     pass
+def upgrade():
+    pass
 
 def eating():
     os.system("cls")
@@ -63,10 +63,11 @@ def menu():
     print("==================================")
     print("Take a rest before exploring again")
     print("1) Eating")
-    print("2) Farming")
-    print("3) Check inventory")
-    print("4) Check Status")
-    print("5) Exploring Dungeon")
+    print("2) Upgrade")
+    print("3) Farming")
+    print("4) Check inventory")
+    print("5) Check Status")
+    print("6) Exploring Dungeon")
     print("==================================")
     
     choice = "0" 

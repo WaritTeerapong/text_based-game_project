@@ -1,0 +1,36 @@
+{
+    "1":{
+
+        "mob" : {
+            "name" : "Zombie",
+            "hp" : 10,
+            "atk" : 5,
+            "item_drop" : "stone"
+        },
+        "ore" : "stone"
+    },
+    
+    "2":{
+
+        "mob" : {
+            "name" : "Skeleton",
+            "hp" : 13,
+            "atk" : 7,
+            "item_drop" : "iron"
+        },
+        "ore" : "iron"
+    },
+
+    "3":{
+
+        "mob" : {
+            "name" : "Enderman",
+            "hp" : 15,
+            "atk" : 10,
+            "item_drop" : "diamond"
+        },
+        "ore" : "diamond"
+    }
+
+    
+}
