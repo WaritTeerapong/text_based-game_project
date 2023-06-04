@@ -50,7 +50,7 @@ class player:
         while (self.invt_cap + item_cap[new_item] > self.max_invt):
             print("The inventory has not enough space...")
             print("You need to throw something out!")
-            print("=== Or do you changed your mind not taking this item ===")
+            print("=== Or do you want to LEAVE the item ===")
             ans = input("(yes/no) >> ")
             if ans.lower() == "yes":
                 return False
@@ -84,7 +84,8 @@ class player:
             self.invt_cap -= item_cap[sad_item] 
             os.system("cls")
             print("You have thrown the", sad_item, "far far away..")
-            input("Your inventory capacity :", self.invt_cap)
+            print("Your inventory capacity :", self.invt_cap)
+            input("")
   
     
     # health management
@@ -95,6 +96,8 @@ class player:
     def healed(self,food):
         if food in item_ablt["heal_item"]:
          self.hp += item_ablt["heal_item"][food]
+         if self.hp>20:
+             self.hp = 20
         else:
             print("You can't get healed from this item")
             

@@ -2,7 +2,8 @@ from Steve import *
 from random import randint
 import os
 
-
+with open("C:\\Users\\smart\\OneDrive\\Documents\\GitHub\\text_based-game_project\\Item_Ability.json", "r") as read_file:
+    item_ablt = load(read_file)
 
 
 def farming():
@@ -37,7 +38,25 @@ def farming():
     
 
 def upgrade():
-    pass
+    os.system("cls")
+    
+    if "diamond" in steve.invt:
+        for i in item_ablt["upgrade_item"]["diamond"]:
+            steve.add_item(i)
+        input("Your upgraded sword and pickaxe has been added!!")
+        
+    elif "iron" in steve.invt:
+        for i in item_ablt["upgrade_item"]["iron"]:
+            steve.add_item(i)
+        input("Your upgraded sword and pickaxe has been added!!")
+        
+    elif "stone" in steve.invt:
+        for i in item_ablt["upgrade_item"]["stone"]:
+            steve.add_item(i)
+        input("Your upgraded sword and pickaxe has been added!!")
+        
+    else :
+        input("There is nothing to upgrade...")
 
 def eating():
     os.system("cls")

@@ -21,10 +21,9 @@
     },
 
     "upgrade_item" :{
-        "stone" : [""],
-        "iron" : [""],
-        "diamond" : [""]
-
+        "stone" : ["stone pickaxe","stone sword"],
+        "iron" : ["iron pickaxe","iron sword"],
+        "diamond" : ["diamond pickaxe","diamond sword"]
     }
 
 }
