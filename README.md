@@ -15,5 +15,5 @@ Mancraft เป็น text-based game โดยจะรันผ่าน Termi
 หรือ clone github ผ่าน https://github.com/WaritTeerapong/text_based-game_project.git
 
 
-ขออภัยในความล่าช้า และความไร้ความรับผิดชอบ
-ขอบคุณครับ
+Enjoy
+ครับ
